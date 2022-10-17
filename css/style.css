@@ -1,0 +1,283 @@
+/* DEFAULT CONFIG  start*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html,body{
+    width: 100%;
+    height: auto;
+}
+
+#homeContainer, #about-us{
+    background-image: url("../images/space.jpg");
+    background-repeat: repeat-y;
+    min-height: 100vh;
+    max-height: max-content;
+}
+
+#about-us{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-us article{
+    width: 95vw;
+    min-height: 100%;
+    max-height: max-content;
+}
+
+header{
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+header nav{
+    font-size: 20px;
+}
+
+footer nav{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer nav i{
+    font-size: 30px;
+    color: #ffffff;
+
+}
+
+#foot{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px white; 
+}
+
+h1,h2,h3{
+    color: #ffffff; 
+}
+
+h1{
+    font-size: clamp(1.75em, 1em + 3vw 2.5em);
+}
+
+a{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    margin-left: 20px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.container p{
+    margin: 10px 20px;
+}
+
+/* DEFAULT CONFIG  end*/
+
+@media only screen and (min-width: 705px) {/* pc */
+    footer{
+        display: none;
+    }
+
+    #astronauta{
+        float: left;
+        margin-left: min(50%, 1000px);
+        width: 400px;
+        height: 0px;
+    }
+    
+    #astronauta img{
+        width: 400px;
+        height: 400px;
+    }
+
+    #outherspace{
+        width: 70%;
+        padding-top: 160px;
+        padding-left: min(5%, 50px);
+    }
+    
+    #outherspace h1{
+        display: block;
+        font-size: 70px;
+        text-align: left;
+        font-weight: 700;
+        width: 100%;
+        text-shadow: 5px 5px 50px black;
+    }
+
+    #outherspace h3{
+        font-size: 24px;
+        text-align: left;
+        font-weight: 700;
+        margin-left: 20px;
+    }
+
+    #botao{
+        margin-top: 60px;
+        margin-left: 260px;
+        margin-bottom: 60px;
+    }
+
+    #botao button{
+        border: none;
+        width: 140px;
+        height: 50px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 14px;
+        border-radius: 30px;
+        background-color: #ffffff;
+
+    }
+
+    #botao i{
+        color: #7b79d9;
+    }
+
+    #botao button:hover{
+        cursor: pointer;
+        background-color: #f5d5e0;
+    }
+
+    #articles{
+        max-width: 100%;
+    }
+
+    #articlesContainer{
+        max-width: 1500px;
+    }
+    
+    #articlesContainer h2{
+        margin-left: 450px;
+        margin-bottom: 20px;
+    }
+
+    .container{
+        display: inline-block;
+        width: min-content;
+        margin: 0 20px;
+        margin-bottom: 20px;
+        background-color: #ffffff;
+        border-radius: 20px;
+    }
+    .container img{
+        min-width: 300px;
+        max-width: 100%;
+        min-height: 200px;
+        max-height: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+}
+
+@media only screen and (max-width: 705px) {/* mobile */
+    html,body{
+        overflow-x: hidden;
+        min-width: 300px;
+    }
+
+    header{
+        display: none;
+    }
+
+    #astronauta{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #astronauta img{
+        width: 400px;
+        height: 400px;
+        margin-top: 230px;
+        margin-bottom: 60px;
+    }
+
+    #outherspace h1{
+        font-size: 40px;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 60px;
+    }
+
+    #outherspace h3{
+        display: none;
+    }
+
+    #botao{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+
+    #botao button{
+        border: none;
+        width: 140px;
+        height: 50px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 14px;
+        border-radius: 30px;
+        background-color: #ffffff;
+
+    }
+
+    #botao i{
+        color: #7b79d9;
+    }
+
+    #botao button:hover{
+        cursor: pointer;
+        background-color: #f5d5e0;
+    }
+
+    #articles{
+        max-width: 100%;
+        text-align: center;
+    }
+
+    #articlesContainer{
+        max-width: 1500px;
+    }
+    
+    #articlesContainer h2{
+        margin-left: 450px;
+        margin-bottom: 20px;
+    }
+
+    .container{
+        display: inline-block;
+        width: 100%;
+        background-color: #ffffff;
+        margin-bottom: 40px;
+    }
+    .container img{
+        min-width: 300px;
+        max-width: 100%;
+        min-height: 200px;
+        max-height: 100%;
+    }
+}

@@ -1,5 +1,4 @@
 /* DEFAULT CONFIG  start*/
-
 *{
     padding: 0;
     margin: 0;
@@ -12,26 +11,44 @@ html,body{
     height: auto;
 }
 
-#homeContainer, #about-us{
+#homeContainer, #about-usContainer{
     background-image: url("../images/space.jpg");
     background-repeat: repeat-y;
     min-height: 100vh;
     max-height: max-content;
 }
 
-#about-us{
+#about-usContainer{
+}
+
+#about-usContainer .center{
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#about-us article{
-    width: 95vw;
-    min-height: 100%;
-    max-height: max-content;
+#about-usContainer #astronauta img{
+    margin-top: 50px;
+    width: 300px;
+    height: 300px;
 }
+
+#about-usContainer #texto{
+    width: 80%;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+#about-usContainer #texto h1{
+    font-size: calc( 2em + 1vw);
+    font-weight: 700;
+}
+
+#about-usContainer #texto p{
+    font-size: calc( 1em + 1vw);
+}
+
 
 header{
     background-color: #000;
@@ -61,23 +78,32 @@ footer nav{
 footer nav i{
     font-size: 30px;
     color: #ffffff;
-
 }
 
-#foot{
+#footline{
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footline > div{
+    width: 80%;
     height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 2px white; 
+    border-top: 2px solid #ccc;
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 50px; 
 }
 
 h1,h2,h3{
     color: #ffffff; 
 }
 
-h1{
+#homeContainer, h1{
     font-size: clamp(1.75em, 1em + 3vw 2.5em);
 }
 
@@ -89,7 +115,7 @@ a{
     font-weight: 600;
 }
 
-.container p{
+#homeContainer .container p{
     margin: 10px 20px;
 }
 
@@ -100,25 +126,25 @@ a{
         display: none;
     }
 
-    #astronauta{
+    #homeContainer #astronauta{
         float: left;
         margin-left: min(50%, 1000px);
         width: 400px;
         height: 0px;
     }
     
-    #astronauta img{
+    #homeContainer #astronauta img{
         width: 400px;
         height: 400px;
     }
 
-    #outherspace{
+    #homeContainer #outherspace{
         width: 70%;
         padding-top: 160px;
         padding-left: min(5%, 50px);
     }
     
-    #outherspace h1{
+    #homeContainer #outherspace h1{
         display: block;
         font-size: 70px;
         text-align: left;
@@ -127,20 +153,20 @@ a{
         text-shadow: 5px 5px 50px black;
     }
 
-    #outherspace h3{
+    #homeContainer #outherspace h3{
         font-size: 24px;
         text-align: left;
         font-weight: 700;
         margin-left: 20px;
     }
 
-    #botao{
+    #homeContainer #botao{
         margin-top: 60px;
         margin-left: 260px;
         margin-bottom: 60px;
     }
 
-    #botao button{
+    #homeContainer #botao button{
         border: none;
         width: 140px;
         height: 50px;
@@ -151,29 +177,29 @@ a{
 
     }
 
-    #botao i{
+    #homeContainer #botao i{
         color: #7b79d9;
     }
 
-    #botao button:hover{
+    #homeContainer #botao button:hover{
         cursor: pointer;
         background-color: #f5d5e0;
     }
 
-    #articles{
+    #homeContainer #articles{
         max-width: 100%;
     }
 
-    #articlesContainer{
+    #homeContainer #articlesContainer{
         max-width: 1500px;
     }
     
-    #articlesContainer h2{
+    #homeContainer #articlesContainer h2{
         margin-left: 450px;
         margin-bottom: 20px;
     }
 
-    .container{
+    #homeContainer .container{
         display: inline-block;
         width: min-content;
         margin: 0 20px;
@@ -181,14 +207,14 @@ a{
         background-color: #ffffff;
         border-radius: 20px;
     }
-    .container img{
+    #homeContainer .container img{
         min-width: 300px;
         max-width: 100%;
         min-height: 200px;
         max-height: 100%;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
-    }
+    }#homeContainer
 }
 
 @media only screen and (max-width: 705px) {/* mobile */
@@ -201,32 +227,32 @@ a{
         display: none;
     }
 
-    #astronauta{
+    #homeContainer #astronauta{
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
     
-    #astronauta img{
+    #homeContainer #astronauta img{
         width: 400px;
         height: 400px;
         margin-top: 230px;
         margin-bottom: 60px;
     }
 
-    #outherspace h1{
+    #homeContainer #outherspace h1{
         font-size: 40px;
         text-align: center;
         font-weight: 700;
         margin-bottom: 60px;
     }
 
-    #outherspace h3{
+    #homeContainer #outherspace h3{
         display: none;
     }
 
-    #botao{
+    #homeContainer #botao{
         width: 100%;
         display: flex;
         justify-content: center;
@@ -234,7 +260,7 @@ a{
         margin-bottom: 60px;
     }
 
-    #botao button{
+    #homeContainer #botao button{
         border: none;
         width: 140px;
         height: 50px;
@@ -245,36 +271,36 @@ a{
 
     }
 
-    #botao i{
+    #homeContainer #botao i{
         color: #7b79d9;
     }
 
-    #botao button:hover{
+    #homeContainer #botao button:hover{
         cursor: pointer;
         background-color: #f5d5e0;
     }
 
-    #articles{
+    #homeContainer #articles{
         max-width: 100%;
         text-align: center;
     }
 
-    #articlesContainer{
+    #homeContainer #articlesContainer{
         max-width: 1500px;
     }
     
-    #articlesContainer h2{
+    #homeContainer #articlesContainer h2{
         margin-left: 450px;
         margin-bottom: 20px;
     }
 
-    .container{
+    #homeContainer .container{
         display: inline-block;
         width: 100%;
         background-color: #ffffff;
         margin-bottom: 40px;
     }
-    .container img{
+    #homeContainer .container img{
         min-width: 300px;
         max-width: 100%;
         min-height: 200px;

@@ -4,7 +4,4 @@
         <a href="../page/about-us.php"><i class="fas fa-user"></i></a>
         <a href=""><i class="fas fa-envelope"></i></a>
     </nav>
-    <div id=foot>
-        <p>@ 2022 Outherspace.com</p>
-    </div>
 </footer>

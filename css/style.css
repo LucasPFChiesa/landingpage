@@ -11,6 +11,18 @@ html,body{
     height: auto;
 }
 
+h1,h2{
+    color: #ffffff; 
+}
+
+a{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    margin-left: 20px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
 #homeContainer, #about-usContainer, #contact-usContainer{
     background-image: url("../images/space.jpg");
     background-repeat: repeat-y;
@@ -18,34 +30,209 @@ html,body{
     max-height: max-content;
 }
 
+/* HOME */
+
+#homeContainer #astronauta{
+    float: left;
+    margin-left: min(50%, 1000px);
+    width: 400px;
+    height: 0px;
+}
+
+#homeContainer #astronauta img{
+    width: 400px;
+    height: 400px;
+}
+
+#homeContainer #outherspace{
+    width: 70%;
+    padding-top: 160px;
+    padding-left: min(5%, 50px);
+}
+
+#homeContainer #outherspace h1{
+    display: block;
+    font-size: 70px;
+    text-align: left;
+    font-weight: 700;
+    width: 100%;
+    text-shadow: 5px 5px 50px black;
+}
+
+#homeContainer #outherspace h3{
+    font-size: 24px;
+    text-align: left;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+#homeContainer #botao{
+    margin-top: 60px;
+    margin-left: 260px;
+    margin-bottom: 60px;
+}
+
+#homeContainer #botao button{
+    border: none;
+    width: 140px;
+    height: 50px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+    border-radius: 30px;
+    background-color: #ffffff;
+}
+
+#homeContainer #botao i{
+    color: #7b79d9;
+}
+
+#homeContainer #botao button:hover{
+    cursor: pointer;
+    background-color: #f5d5e0;
+}
+
+#homeContainer #articleTitle{
+    width: 100%;
+    text-align: center;
+    margin-bottom:5px;
+}
+
+#homeContainer .articlesContainer{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+} 
+
+#homeContainer .article{
+    margin: 0 auto;
+    background-color: #ffffff;
+    min-width: 200px;
+    max-width: 400px;
+    min-height: 200px;
+    max-height: 400px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+#homeContainer .article img{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 50px;
+    max-height: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+@media screen and(min-width:640px){
+    #homeContainer .article{
+        flex-basis: 1%;
+    }
+}
+
+@media screen and(min-width:960px){
+    #homeContainer .article{
+        flex-basis: 1%;
+    }
+}
+
+@media screen and(min-width:1280px){
+    #homeContainer .article{
+        flex-basis: 1%;
+    }
+} 
+
+#homeContainer, h1{
+    font-size: clamp(1.75em, 1em + 3vw 2.5em);
+}
+
+#homeContainer .container p{
+    margin: 10px 20px;
+}
+
+@media screen and (max-width:800px){
+    #homeContainer #astronauta{
+        float: none;
+        display: grid;
+        place-items: center;
+        margin-left: 0;
+        width: 100%;
+        height: 500px;
+    }
+    
+    #homeContainer #outherspace{
+        width: 100%;
+        display: grid;
+        place-items: center;
+        margin-bottom: 3vh;
+        padding-top: 20vh;
+        padding-left: min(5%, 50px);
+    }
+
+    #homeContainer #outherspace h1{
+        font-size: 40px;
+        width: min-content;
+    }
+    #homeContainer #outherspace h3{
+        display: none;
+    }
+    #homeContainer #botao {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 200px;
+        display: grid;
+        place-items: center;
+    }
+
+}
+
+/* ABOUT US */
+
 #about-usContainer .center{
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+}
+
+#about-usContainer #astronauta{
+    width: 400px;
+    height: 350px;
 }
 
 #about-usContainer #astronauta img{
-    margin-top: 50px;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
 }
 
-#about-usContainer #texto{
-    width: 80%;
-    margin-bottom: 30px;
+#about-usContainer .container {
+    width: 95%;
+    max-width: 900px;
+    min-width: 290px;
+    border-radius: 30px;
+    background-color: rgba(0,0,0,0.8);
+    padding: 20px;
+}
+
+@media screen and (max-width:1000px){
+    #about-usContainer .container {
+        width: 100%;
+        padding: 10px;
+        padding-bottom: 100vh;
+    }
+}
+
+#about-usContainer h2{
+    font-size: 30px;
+    margin: 0.5em 0;
+    color: #ffffff;    
+}
+
+#about-usContainer p{
+    font-size: max(16.5px,min(2vw ,30px));
     color: #ffffff;
-    text-shadow: 1px 4px 10px #000;
 }
 
-#about-usContainer #texto h1{
-    font-size: calc( 2em + 1vw);
-    font-weight: 700;
-}
-
-#about-usContainer #texto p{
-    font-size: calc( 1em + 1vw);
-}
+/* CONTACT US */
 
 #contact-usContainer .center{
     width: 100%;
@@ -64,17 +251,33 @@ html,body{
     height: 400px;
 }
 
+#contact-usContainer .container {
+    width: 95%;
+    max-width: 900px;
+    min-width: 290px;
+    border-radius: 30px;
+    background-color: rgba(0,0,0,0.4);
+    padding: 20px;
+  }
+
 #contact-usContainer input[type=text], select, textarea{
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #c5b1be;
+    background-color: rgba(160, 139, 152,0.6);
+    border-radius: 30px;
     box-sizing: border-box;
     resize: vertical;
+    color: #ffffff;
   }
 
-  #contact-us #subject{
+  #contact-usContainer textarea::placeholder, #contact-usContainer input::placeholder{
+    color: #ffffff;
+  }
+
+  #contact-us #subject[type=text]{
     height: 5px;
+    border-radius: 1px;
   }
   
   #contact-usContainer label {
@@ -82,31 +285,25 @@ html,body{
     display: inline-block;
   }
   
-  #contact-usContainer input[type=submit] {
+  #contact-usContainer button{
     background-color: #7b337d;
-    color: white;
+    color: #ffffff;
     padding: 12px 20px;
     margin-top: 30px;
     height: 50px;
     border: none;
-    border-radius: 4px;
+    border-radius: 30px;
     cursor: pointer;
     float: right;
   }
-  #contact-usContainer input[type=submit]:hover {
-    background-color: #401340;
-  }
-  
-  #contact-usContainer .container {
-    width: 80%;
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
+  #contact-usContainer button:hover {
+    background-color: #741874;
   }
   
   #contact-usContainer .col-25 {
     float: left;
     width: 25%;
+    color: #ffffff;
     margin-top: 6px;
   }
   
@@ -122,7 +319,7 @@ html,body{
     clear: both;
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 687px) {
     #contact-usContainer .col-25, .col-75, input[type=submit] {
       width: 100%;
       margin-top: 0;
@@ -132,22 +329,30 @@ html,body{
         width: 100%;
         margin-top: 0;
     }
-
+    #contact-usContainer .col-75, #contact-usContainer .col-25 {
+        width: 100%;
+    }
+    
   }
 
+  /* HEADER */
 header{
     background-color: #000;
     position: fixed;
     width: 100%;
-    height: 60px;
+    height: max-content;
     display: flex;
     align-items: center;
 }
 
-header nav{
+header nav p{
+    color: #ffffff;
     font-size: 20px;
+    display: inline-block;
+    width: max-content;
+    margin: 15px 5px;
 }
-
+ /* Footer */
 footer nav{
     position: fixed;
     bottom: 0;
@@ -188,10 +393,6 @@ h1,h2,h3{
     color: #ffffff; 
 }
 
-#homeContainer, h1{
-    font-size: clamp(1.75em, 1em + 3vw 2.5em);
-}
-
 a{
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
@@ -199,206 +400,14 @@ a{
     color: #ffffff;
     font-weight: 600;
 }
-
-#homeContainer .container p{
-    margin: 10px 20px;
-}
-
-/* DEFAULT CONFIG  end*/
-
-@media only screen and (min-width: 821px) {/* pc */
+@media only screen and (min-width: 800.5px) {
     footer{
         display: none;
     }
-
-    #homeContainer #astronauta{
-        float: left;
-        margin-left: min(50%, 1000px);
-        width: 400px;
-        height: 0px;
-    }
-    
-    #homeContainer #astronauta img{
-        width: 400px;
-        height: 400px;
-    }
-
-    #homeContainer #outherspace{
-        width: 70%;
-        padding-top: 160px;
-        padding-left: min(5%, 50px);
-    }
-    
-    #homeContainer #outherspace h1{
-        display: block;
-        font-size: 70px;
-        text-align: left;
-        font-weight: 700;
-        width: 100%;
-        text-shadow: 5px 5px 50px black;
-    }
-
-    #homeContainer #outherspace h3{
-        font-size: 24px;
-        text-align: left;
-        font-weight: 700;
-        margin-left: 20px;
-    }
-
-    #homeContainer #botao{
-        margin-top: 60px;
-        margin-left: 260px;
-        margin-bottom: 60px;
-    }
-
-    #homeContainer #botao button{
-        border: none;
-        width: 140px;
-        height: 50px;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        font-size: 14px;
-        border-radius: 30px;
-        background-color: #ffffff;
-    }
-
-    #homeContainer #botao i{
-        color: #7b79d9;
-    }
-
-    #homeContainer #botao button:hover{
-        cursor: pointer;
-        background-color: #f5d5e0;
-    }
-
-    #homeContainer #articles{
-        max-width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #homeContainer #articlesContainer{
-        width: 80%;
-    }
-    
-    #homeContainer #articletitle{
-        text-align: center;
-        width: 100%;
-
-    }
-
-    #homeContainer .center{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #homeContainer .container{
-        display: inline-block;
-        width: 300px;
-        
-        margin: 0 10px;
-        margin-bottom: 20px;
-        background-color: #ffffff;
-        border-radius: 20px;
-    }
-    #homeContainer .container img{
-        min-width: 300px;
-        max-width: 100%;
-        min-height: 200px;
-        max-height: 100%;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-    }
 }
 
-@media only screen and (max-width: 821px) {/* mobile */
-    html,body{
-        overflow-x: hidden;
-        min-width: 300px;
-    }
-
+@media only screen and (max-width: 800px) {
     header{
         display: none;
-    }
-
-    #homeContainer #astronauta{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    #homeContainer #astronauta img{
-        width: 400px;
-        height: 400px;
-        margin-top: 230px;
-        margin-bottom: 60px;
-    }
-
-    #homeContainer #outherspace h1{
-        font-size: 40px;
-        text-align: center;
-        font-weight: 700;
-        margin-bottom: 60px;
-    }
-
-    #homeContainer #outherspace h3{
-        display: none;
-    }
-
-    #homeContainer #botao{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 60px;
-    }
-
-    #homeContainer #botao button{
-        border: none;
-        width: 140px;
-        height: 50px;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        font-size: 14px;
-        border-radius: 30px;
-        background-color: #ffffff;
-
-    }
-
-    #homeContainer #botao i{
-        color: #7b79d9;
-    }
-
-    #homeContainer #botao button:hover{
-        cursor: pointer;
-        background-color: #f5d5e0;
-    }
-
-    #homeContainer #articles{
-        max-width: 100%;
-        text-align: center;
-    }
-
-    #homeContainer #articlesContainer{
-        max-width: 1500px;
-    }
-    
-    #homeContainer #articlesContainer h2{
-        margin-left: 450px;
-        margin-bottom: 20px;
-    }
-
-    #homeContainer .container{
-        display: inline-block;
-        width: 100%;
-        background-color: #ffffff;
-        margin-bottom: 40px;
-    }
-    #homeContainer .container img{
-        min-width: 300px;
-        max-width: 100%;
-        min-height: 200px;
-        max-height: 100%;
     }
 }

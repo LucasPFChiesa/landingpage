@@ -1,0 +1,44 @@
+#about-usContainer .center{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about-usContainer #astronauta{
+    width: 400px;
+    height: 350px;
+}
+
+#about-usContainer #astronauta img{
+    width: 400px;
+    height: 400px;
+}
+
+#about-usContainer .container {
+    width: 95%;
+    max-width: 900px;
+    min-width: 290px;
+    border-radius: 30px;
+    background-color: rgba(0,0,0,0.4);
+    padding: 20px;
+  }
+
+#about-usContainer .center{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-usContainer h2{
+    font-size: 30px;
+    margin: 0.5em 0;
+    color: #ffffff;    
+}
+
+#about-usContainer p{
+    font-size: max(16.5px,min(2vw ,30px));
+    color: #ffffff;
+}

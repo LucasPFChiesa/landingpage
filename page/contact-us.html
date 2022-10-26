@@ -12,9 +12,15 @@
 <body>
     <header>
         <nav>
-            <a href="../index.html">HOME</a>
-            <a href="../page/about-us.html">ABOUT US</a>
-            <a href="../page/contact-us.html">CONTACT US</a>
+            <a href="../index.html">
+                <p>HOME</p>
+            </a>
+            <a href="../page/about-us.html">
+                <p>ABOUT US</p>
+            </a>
+            <a href="../page/contact-us.html">
+                <p>CONTACT US</p>
+            </a>
         </nav>
     </header>
 
@@ -31,18 +37,10 @@
                     <form action="action_page.php">
                         <div class="row">
                             <div class="col-25">
-                                <label for="fname">First Name</label>
+                                <label for="fname">Nome Completo</label>
                             </div>
                             <div class="col-75">
-                                <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-25">
-                                <label for="lname">Last Name</label>
-                            </div>
-                            <div class="col-75">
-                                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                                <input type="text" id="fname" name="firstname" placeholder="Seu nome...">
                             </div>
                         </div>
                         <div class="row">
@@ -63,7 +61,12 @@
                             </div>
                         </div>
                         <div class="row">
-                            <input type="submit" value="Submit">
+                            <button onclick="enviar()">Enviar Mensagem</button>
+                                    <script>
+                                        function enviar() {
+                                            alert("Mensagem Enviada");
+                                        }
+                                    </script>
                         </div>
                     </form>
                 </div>

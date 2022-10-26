@@ -99,6 +99,8 @@ a{
 
 #homeContainer .articlesContainer{
     width: 90%;
+    max-width: 1489px;
+    margin-left: min(20px,10vw);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -145,7 +147,7 @@ a{
     font-size: clamp(1.75em, 1em + 3vw 2.5em);
 }
 
-#homeContainer .container p{
+#homeContainer .article p{
     margin: 10px 20px;
 }
 
